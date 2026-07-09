@@ -2,9 +2,23 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Spark - Content Idea Generator for Creators",
-  description: "Generate personalized, trending content ideas for YouTube, TikTok, Instagram, and Twitch. Built for creators who want to stay ahead of the curve.",
-  keywords: ["content creation", "content ideas", "youtube", "tiktok", "instagram", "twitch", "streaming", "creator tools"],
+  title: "Spark — Content Ideas for Creators",
+  description:
+    "Generate personalized, trending content ideas for YouTube, TikTok, Instagram & Twitch. Stop guessing. Start creating.",
+  keywords: [
+    "content creation",
+    "content ideas",
+    "youtube ideas",
+    "tiktok ideas",
+    "instagram ideas",
+    "creator tools",
+    "content strategy",
+  ],
+  openGraph: {
+    title: "Spark — Content Ideas for Creators",
+    description: "Never run out of content ideas again.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -14,9 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
-        {children}
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
